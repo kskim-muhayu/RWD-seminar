@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Layout Lab</title>
+  </head>
+  <body>
+    <div class="min-h-screen bg-background text-foreground">
+      <header class="sticky top-0 z-20 border-b border-border/80 bg-card/95 px-4 py-3 backdrop-blur md:px-6">
+        <div class="mx-auto flex max-w-7xl items-center justify-between gap-4">
+          <a href="#" class="flex min-w-0 items-center gap-3">
+            <span class="flex size-9 shrink-0 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-sm">
+              <i data-lucide="grid-2x2" class="size-4" aria-hidden="true"></i>
+            </span>
+            <span class="min-w-0">
+              <span class="block truncate text-sm font-semibold leading-5 md:text-base">Responsive Layout Lab</span>
+              <span class="block truncate text-xs text-muted-foreground">CSS Grid Layout</span>
+            </span>
+          </a>
+
+          <div class="hidden items-center gap-2 md:flex">
+            <span class="rounded-md border border-border bg-background px-2.5 py-1 text-xs font-medium text-muted-foreground">
+              Tailwind CSS 4
+            </span>
+            <span class="rounded-md border border-border bg-accent px-2.5 py-1 text-xs font-medium text-accent-foreground">
+              shadcn tokens
+            </span>
+          </div>
+
+          <button
+            class="inline-flex size-9 items-center justify-center rounded-md border border-border bg-background text-foreground shadow-sm transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:hidden"
+            type="button"
+            aria-label="메뉴 열기"
+            aria-controls="mobile-navigation"
+            aria-expanded="false"
+            data-menu-button
+          >
+            <i data-lucide="menu" class="size-4" aria-hidden="true" data-menu-icon></i>
+          </button>
+        </div>
+      </header>
+
+      <div class="mx-auto grid w-full max-w-7xl grid-cols-1 md:grid-cols-[72px_1fr] lg:grid-cols-[260px_1fr]">
+        <nav
+          id="mobile-navigation"
+          class="hidden border-b border-border bg-card/60 p-4 md:block md:min-h-[calc(100vh-129px)] md:border-b-0 md:border-r md:p-3 lg:p-5"
+          aria-label="Primary navigation"
+          data-sidebar
+        >
+          <ul class="grid gap-1.5">
+            <li>
+              <a
+                class="nav-link active"
+                href="#responsive-grid"
+                aria-current="page"
+                title="Responsive Grid"
+              >
+                <i data-lucide="layout-grid" class="size-4 shrink-0" aria-hidden="true"></i>
+                <span class="md:hidden lg:inline">Responsive Grid</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="#fixed-or-fluid" title="Fixed or fluid">
+                <i data-lucide="columns-3" class="size-4" aria-hidden="true"></i>
+                <span class="md:hidden lg:inline">Fixed or fluid</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="#alignment" title="Alignment">
+                <i data-lucide="monitor-smartphone" class="size-4" aria-hidden="true"></i>
+                <span class="md:hidden lg:inline">Alignment</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="#flex-order" title="Flex order">
+                <i data-lucide="blocks" class="size-4" aria-hidden="true"></i>
+                <span class="md:hidden lg:inline">Flex order</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="#responsible-table" title="Responsible table">
+                <i data-lucide="layout-template" class="size-4" aria-hidden="true"></i>
+                <span class="md:hidden lg:inline">Responsive table</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <main class="min-w-0 bg-[var(--content-background)] px-4 py-6 md:px-8 md:py-8">
+          <section id="responsive-grid" data-screen>
+            <div class="max-w-3xl">
+              <div class="mb-5 inline-flex items-center gap-2 rounded-md border border-border bg-card px-2.5 py-1 text-xs font-medium text-muted-foreground">
+                <i data-lucide="badge-info" class="size-3.5" aria-hidden="true"></i>
+                Reference converted from CSS Grid example
+              </div>
+              <h1 class="flex items-center gap-3 text-3xl font-semibold tracking-normal text-foreground md:text-4xl">
+                <span>Responsive Grid</span>
+              </h1>
+              <p class="mt-4 text-2xl leading-7 text-muted-foreground">
+                Grid Layout Module offers a grid-based layout system, with rows and columns. It makes complex and responsive web pages easier to design without floats or manual positioning.
+              </p>
+            </div>
+
+            <div class="mt-8" aria-labelledby="flex-card-grid-title">
+              <div class="mb-4">
+                <h2 id="flex-card-grid-title" class="text-lg font-semibold">Flex Card Grid</h2>
+                <p class="mt-1 text-sm text-muted-foreground">Six placeholder cards arranged in a responsive flex box area.</p>
+              </div>
+
+              <div class="flex flex-wrap gap-4">
+                <article class="flex min-h-32 flex-[1_1_240px] items-center justify-center rounded-lg border border-border bg-card p-5 text-center text-sm font-medium text-muted-foreground shadow-sm">
+                  Placeholder text
+                </article>
+                <article class="flex min-h-32 flex-[1_1_240px] items-center justify-center rounded-lg border border-border bg-card p-5 text-center text-sm font-medium text-muted-foreground shadow-sm">
+                  Placeholder text
+                </article>
+                <article class="flex min-h-32 flex-[1_1_240px] items-center justify-center rounded-lg border border-border bg-card p-5 text-center text-sm font-medium text-muted-foreground shadow-sm">
+                  Placeholder text
+                </article>
+                <article class="flex min-h-32 flex-[1_1_240px] items-center justify-center rounded-lg border border-border bg-card p-5 text-center text-sm font-medium text-muted-foreground shadow-sm">
+                  Placeholder text
+                </article>
+                <article class="flex min-h-32 flex-[1_1_240px] items-center justify-center rounded-lg border border-border bg-card p-5 text-center text-sm font-medium text-muted-foreground shadow-sm">
+                  Placeholder text
+                </article>
+                <article class="flex min-h-32 flex-[1_1_240px] items-center justify-center rounded-lg border border-border bg-card p-5 text-center text-sm font-medium text-muted-foreground shadow-sm">
+                  Placeholder text
+                </article>
+              </div>
+            </div>
+
+            <div class="mt-8" aria-labelledby="grid-layout-title">
+              <div class="mb-4">
+                <h2 id="grid-layout-title" class="text-lg font-semibold">Grid layout</h2>
+                <p class="mt-1 text-sm text-muted-foreground">Four items arranged with responsive grid columns.</p>
+              </div>
+
+              <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+                <article class="responsive-grid-card flex min-h-32 items-center justify-center rounded-lg border border-border bg-card p-5 text-sm font-medium text-muted-foreground shadow-sm">
+                  item 1
+                </article>
+                <article class="responsive-grid-card flex min-h-32 items-center justify-center rounded-lg border border-border bg-card p-5 text-sm font-medium text-muted-foreground shadow-sm">
+                  item 2
+                </article>
+                <article class="responsive-grid-card flex min-h-32 items-center justify-center rounded-lg border border-border bg-card p-5 text-sm font-medium text-muted-foreground shadow-sm">
+                  item 3
+                </article>
+                <article class="responsive-grid-card flex min-h-32 items-center justify-center rounded-lg border border-border bg-card p-5 text-sm font-medium text-muted-foreground shadow-sm">
+                  item 4
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section id="fixed-or-fluid" class="hidden" data-screen>
+            <div class="max-w-3xl">
+              <h1 class="text-3xl font-semibold tracking-normal text-foreground md:text-4xl">
+                Fixed or fluid
+              </h1>
+              <p class="mt-4 text-base leading-7 text-muted-foreground">
+                Content will be added here.
+              </p>
+            </div>
+
+            <div class="mt-8 overflow-x-auto pb-2">
+              <figure class="w-[800px] overflow-hidden rounded-lg border border-border bg-card shadow-sm">
+                <img
+                  src="/images/blueCar.jpg"
+                  alt="Blue car"
+                  width="800"
+                  height="468"
+                  class="h-[468px] w-[800px] max-w-none object-cover"
+                />
+              </figure>
+            </div>
+
+            <div class="mt-8" aria-labelledby="fixed-grid-layout-title">
+              <div class="mb-4">
+                <h2 id="fixed-grid-layout-title" class="text-lg font-semibold">Grid layout</h2>
+                <p class="mt-1 text-sm text-muted-foreground">Rows switch from one stacked column to a fixed and fluid column mix.</p>
+              </div>
+
+              <div class="grid gap-4">
+                <article class="responsive-grid-card grid overflow-hidden rounded-lg border border-border bg-card text-sm shadow-sm sm:grid-cols-[4rem_1fr_2fr]">
+                  <div class="flex min-h-16 items-center justify-center border-b border-border bg-muted text-primary sm:border-b-0 sm:border-r">
+                    <i data-lucide="columns-3" class="size-5" aria-hidden="true"></i>
+                  </div>
+                  <div class="border-b border-border p-4 font-medium sm:border-b-0 sm:border-r">
+                    Fixed column
+                  </div>
+                  <div class="p-4 text-muted-foreground">
+                    The first column keeps a stable 4rem width while the rest of the row adapts.
+                  </div>
+                </article>
+
+                <article class="responsive-grid-card grid overflow-hidden rounded-lg border border-border bg-card text-sm shadow-sm sm:grid-cols-[4rem_1fr_2fr]">
+                  <div class="flex min-h-16 items-center justify-center border-b border-border bg-muted text-primary sm:border-b-0 sm:border-r">
+                    <i data-lucide="grid-2x2" class="size-5" aria-hidden="true"></i>
+                  </div>
+                  <div class="border-b border-border p-4 font-medium sm:border-b-0 sm:border-r">
+                    Fluid column
+                  </div>
+                  <div class="p-4 text-muted-foreground">
+                    The middle column uses 1fr and shares remaining space with the larger content area.
+                  </div>
+                </article>
+
+                <article class="responsive-grid-card grid overflow-hidden rounded-lg border border-border bg-card text-sm shadow-sm sm:grid-cols-[4rem_1fr_2fr]">
+                  <div class="flex min-h-16 items-center justify-center border-b border-border bg-muted text-primary sm:border-b-0 sm:border-r">
+                    <i data-lucide="monitor-smartphone" class="size-5" aria-hidden="true"></i>
+                  </div>
+                  <div class="border-b border-border p-4 font-medium sm:border-b-0 sm:border-r">
+                    Wide column
+                  </div>
+                  <div class="p-4 text-muted-foreground">
+                    The final column uses 2fr, giving descriptive content twice the flexible room.
+                  </div>
+                </article>
+
+                <article class="responsive-grid-card grid overflow-hidden rounded-lg border border-border bg-card text-sm shadow-sm sm:grid-cols-[4rem_1fr_2fr]">
+                  <div class="flex min-h-16 items-center justify-center border-b border-border bg-muted text-primary sm:border-b-0 sm:border-r">
+                    <i data-lucide="tablet" class="size-5" aria-hidden="true"></i>
+                  </div>
+                  <div class="border-b border-border p-4 font-medium sm:border-b-0 sm:border-r">
+                    Mobile stack
+                  </div>
+                  <div class="p-4 text-muted-foreground">
+                    Below 40rem, each row becomes a single vertical column for easier reading.
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section id="alignment" class="hidden" data-screen>
+            <div class="grid gap-6 md:grid-cols-2 md:items-center">
+              <div class="order-2 md:order-1">
+                <h1 class="text-2xl font-semibold tracking-normal text-foreground md:text-3xl">
+                  카피킬러에서는 표절부터 GPT Killer까지 모두 확인할 수 있습니다
+                </h1>
+                <button
+                  class="mt-6 inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  type="button"
+                >
+                  검사하기
+                </button>
+              </div>
+
+              <figure class="order-1 overflow-hidden rounded-lg border border-border bg-card shadow-sm md:order-2">
+                <img
+                  src="/images/blueCar.jpg"
+                  alt="Blue car"
+                  width="800"
+                  height="468"
+                  class="h-auto w-full object-cover"
+                />
+              </figure>
+            </div>
+          </section>
+
+          <section id="flex-order" class="hidden" data-screen>
+            <div class="max-w-3xl">
+              <h1 class="text-3xl font-semibold tracking-normal text-foreground md:text-4xl">
+                Flex order
+              </h1>
+              <p class="mt-4 text-base leading-7 text-muted-foreground">
+                Content will be added here.
+              </p>
+            </div>
+          </section>
+
+          <section id="responsible-table" class="hidden" data-screen>
+            <div class="max-w-3xl">
+              <h1 class="text-3xl font-semibold tracking-normal text-foreground md:text-4xl">
+                Responsible table
+              </h1>
+              <p class="mt-4 text-base leading-7 text-muted-foreground">
+                Content will be added here.
+              </p>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <footer class="border-t border-border bg-card px-4 py-4 md:px-6">
+        <div class="mx-auto flex max-w-7xl flex-col gap-1 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+          <p>Responsive Layout Lab</p>
+          <p>Built for responsive web design practice.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
