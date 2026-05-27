@@ -73,13 +73,7 @@
               </a>
             </li>
             <li>
-              <a class="nav-link" href="#flex-order" title="Flex order">
-                <i data-lucide="blocks" class="size-4" aria-hidden="true"></i>
-                <span class="md:hidden lg:inline">Flex order</span>
-              </a>
-            </li>
-            <li>
-              <a class="nav-link" href="#responsible-table" title="Responsible table">
+              <a class="nav-link" href="#responsive-table" title="Responsive table">
                 <i data-lucide="layout-template" class="size-4" aria-hidden="true"></i>
                 <span class="md:hidden lg:inline">Responsive table</span>
               </a>
@@ -259,25 +253,130 @@
             </div>
           </section>
 
-          <section id="flex-order" class="hidden" data-screen>
+          <section id="responsive-table" class="hidden" data-screen>
             <div class="max-w-3xl">
               <h1 class="text-3xl font-semibold tracking-normal text-foreground md:text-4xl">
-                Flex order
+                Responsive table
               </h1>
               <p class="mt-4 text-base leading-7 text-muted-foreground">
-                Content will be added here.
+                Two table patterns for product inventory that remain readable on narrow screens.
               </p>
             </div>
-          </section>
 
-          <section id="responsible-table" class="hidden" data-screen>
-            <div class="max-w-3xl">
-              <h1 class="text-3xl font-semibold tracking-normal text-foreground md:text-4xl">
-                Responsible table
-              </h1>
-              <p class="mt-4 text-base leading-7 text-muted-foreground">
-                Content will be added here.
-              </p>
+            <div class="mt-8">
+              <div class="mb-4">
+                <h2 class="text-lg font-semibold">Sticky first column table</h2>
+                <p class="mt-1 text-sm text-muted-foreground">Horizontal scrolling keeps the product name visible.</p>
+              </div>
+
+              <div class="overflow-x-auto rounded-lg border border-border bg-card shadow-sm">
+                <table class="min-w-[900px] border-collapse text-left text-sm">
+                  <thead>
+                    <tr class="border-b border-border bg-muted text-foreground">
+                      <th class="sticky left-0 z-10 bg-muted px-4 py-3 font-semibold">상품명</th>
+                      <th class="px-4 py-3 font-semibold">재고</th>
+                      <th class="px-4 py-3 font-semibold">입고일</th>
+                      <th class="px-4 py-3 font-semibold">판매가</th>
+                      <th class="px-4 py-3 font-semibold">상태</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-border">
+                    <tr>
+                      <td class="sticky left-0 z-10 bg-card px-4 py-3 font-medium">Surface Go 3</td>
+                      <td class="px-4 py-3">12</td>
+                      <td class="px-4 py-3">2026-05-20</td>
+                      <td class="px-4 py-3">430,000원</td>
+                      <td class="px-4 py-3">판매중</td>
+                    </tr>
+                    <tr>
+                      <td class="sticky left-0 z-10 bg-card px-4 py-3 font-medium">ThinkPad X1 Carbon</td>
+                      <td class="px-4 py-3">7</td>
+                      <td class="px-4 py-3">2026-05-18</td>
+                      <td class="px-4 py-3">1,890,000원</td>
+                      <td class="px-4 py-3">판매중</td>
+                    </tr>
+                    <tr>
+                      <td class="sticky left-0 z-10 bg-card px-4 py-3 font-medium">iPad Air 13</td>
+                      <td class="px-4 py-3">4</td>
+                      <td class="px-4 py-3">2026-05-22</td>
+                      <td class="px-4 py-3">1,120,000원</td>
+                      <td class="px-4 py-3">소량</td>
+                    </tr>
+                    <tr>
+                      <td class="sticky left-0 z-10 bg-card px-4 py-3 font-medium">Galaxy Book Pro</td>
+                      <td class="px-4 py-3">0</td>
+                      <td class="px-4 py-3">2026-05-14</td>
+                      <td class="px-4 py-3">1,540,000원</td>
+                      <td class="px-4 py-3">품절</td>
+                    </tr>
+                    <tr>
+                      <td class="sticky left-0 z-10 bg-card px-4 py-3 font-medium">Mac mini M4</td>
+                      <td class="px-4 py-3">16</td>
+                      <td class="px-4 py-3">2026-05-24</td>
+                      <td class="px-4 py-3">890,000원</td>
+                      <td class="px-4 py-3">예약</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="mt-10">
+              <div class="mb-4">
+                <h2 class="text-lg font-semibold">Stacked mobile table</h2>
+                <p class="mt-1 text-sm text-muted-foreground">Rows become labeled cards below the small breakpoint.</p>
+              </div>
+
+              <div class="overflow-hidden rounded-lg border border-border bg-card shadow-sm">
+                <table class="w-full border-collapse text-left text-sm">
+                  <thead class="hidden bg-muted text-foreground sm:table-header-group">
+                    <tr class="border-b border-border">
+                      <th class="px-4 py-3 font-semibold">상품명</th>
+                      <th class="px-4 py-3 font-semibold">재고</th>
+                      <th class="px-4 py-3 font-semibold">입고일</th>
+                      <th class="px-4 py-3 font-semibold">판매가</th>
+                      <th class="px-4 py-3 font-semibold">상태</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-border sm:divide-y">
+                    <tr class="block p-4 sm:table-row sm:p-0">
+                      <td class="flex justify-between gap-4 py-1 font-medium sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">상품명</span>Surface Go 3</td>
+                      <td class="flex justify-between gap-4 py-1 sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">재고</span>12</td>
+                      <td class="flex justify-between gap-4 py-1 sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">입고일</span>2026-05-20</td>
+                      <td class="flex justify-between gap-4 py-1 sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">판매가</span>430,000원</td>
+                      <td class="flex justify-between gap-4 py-1 sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">상태</span>판매중</td>
+                    </tr>
+                    <tr class="block p-4 sm:table-row sm:p-0">
+                      <td class="flex justify-between gap-4 py-1 font-medium sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">상품명</span>ThinkPad X1 Carbon</td>
+                      <td class="flex justify-between gap-4 py-1 sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">재고</span>7</td>
+                      <td class="flex justify-between gap-4 py-1 sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">입고일</span>2026-05-18</td>
+                      <td class="flex justify-between gap-4 py-1 sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">판매가</span>1,890,000원</td>
+                      <td class="flex justify-between gap-4 py-1 sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">상태</span>판매중</td>
+                    </tr>
+                    <tr class="block p-4 sm:table-row sm:p-0">
+                      <td class="flex justify-between gap-4 py-1 font-medium sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">상품명</span>iPad Air 13</td>
+                      <td class="flex justify-between gap-4 py-1 sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">재고</span>4</td>
+                      <td class="flex justify-between gap-4 py-1 sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">입고일</span>2026-05-22</td>
+                      <td class="flex justify-between gap-4 py-1 sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">판매가</span>1,120,000원</td>
+                      <td class="flex justify-between gap-4 py-1 sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">상태</span>소량</td>
+                    </tr>
+                    <tr class="block p-4 sm:table-row sm:p-0">
+                      <td class="flex justify-between gap-4 py-1 font-medium sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">상품명</span>Galaxy Book Pro</td>
+                      <td class="flex justify-between gap-4 py-1 sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">재고</span>0</td>
+                      <td class="flex justify-between gap-4 py-1 sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">입고일</span>2026-05-14</td>
+                      <td class="flex justify-between gap-4 py-1 sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">판매가</span>1,540,000원</td>
+                      <td class="flex justify-between gap-4 py-1 sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">상태</span>품절</td>
+                    </tr>
+                    <tr class="block p-4 sm:table-row sm:p-0">
+                      <td class="flex justify-between gap-4 py-1 font-medium sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">상품명</span>Mac mini M4</td>
+                      <td class="flex justify-between gap-4 py-1 sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">재고</span>16</td>
+                      <td class="flex justify-between gap-4 py-1 sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">입고일</span>2026-05-24</td>
+                      <td class="flex justify-between gap-4 py-1 sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">판매가</span>890,000원</td>
+                      <td class="flex justify-between gap-4 py-1 sm:table-cell sm:px-4 sm:py-3"><span class="text-muted-foreground sm:hidden">상태</span>예약</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </section>
         </main>
